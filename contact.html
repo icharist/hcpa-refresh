@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Your CPA Firm for expert accounting and tax services. Reach out to us via phone, email, or our online form.">
+    <link rel="stylesheet" href="custom-dark-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Contact Us | Your CPA Firm Name</title>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">Your CPA Firm Name</a>
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="visually-hidden">Menu</span>
+            &#9776;
+        </button>
+        <nav class="main-navigation" id="primary-navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="current-menu-item">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content">
+    <section class="page-hero" style="background-color: var(--color-surface); padding: var(--spacing-xl) 0;">
+        <div class="container text-center">
+            <h1>Get In Touch</h1>
+            <p class="lead">We're here to help with all your accounting needs. Reach out today!</p>
+        </div>
+    </section>
+
+    <section class="contact-details-form">
+        <div class="container">
+            <div class="grid grid-cols-2"> <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Feel free to call, email, or visit us at our office.</p>
+                    
+                    <address>
+                        <strong>Your CPA Firm Name</strong><br>
+                        123 Main Street<br>
+                        Anytown, ST 12345<br>
+                        Blue Springs, Missouri (Example location) </address>
+                    
+                    <p>
+                        <strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a><br>
+                        <strong>Email:</strong> <a href="mailto:info@yourcpafirm.com">info@yourcpafirm.com</a>
+                    </p>
+
+                    <h3>Office Hours</h3>
+                    <p>
+                        Monday - Friday: 9:00 AM - 5:00 PM<br>
+                        Saturday - Sunday: Closed<br>
+                        <em>(Evening or weekend appointments available by request)</em>
+                    </p>
+                    
+                    <div class="map-placeholder" style="background-color: #333; height: 250px; margin-top: var(--spacing-lg); display: flex; align-items: center; justify-content: center; color: #777; border-radius: var(--border-radius);">
+                        <p>Embedded Map Area (e.g., Google Maps iframe)</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <form action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST" class="contact-form">
+                        <p class="honeypot" style="display:none;">
+                            <label for="hp-name">Name (leave empty)</label>
+                            <input type="text" name="hp-name" id="hp-name" tabindex="-1" autocomplete="off">
+                        </p>
+                        <div>
+                            <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div>
+                            <label for="message">Message <span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="button">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; <span id="current-year"></span> Your CPA Firm Name. All Rights Reserved.</p>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNavigation = document.querySelector('.main-navigation');
+        if (mobileNavToggle && mainNavigation) {
+            mobileNavToggle.addEventListener('click', function() {
+                const isExpanded = mainNavigation.classList.toggle('is-open');
+                this.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Your CPA Firm, our mission, values, and experienced team.">
+    <link rel="stylesheet" href="custom-dark-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>About Us | Your CPA Firm Name</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Your CPA Firm Name</a>
+            </div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="visually-hidden">Menu</span>
+                &#9776;
+            </button>
+            <nav class="main-navigation" id="primary-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="current-menu-item">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero" style="background-color: var(--color-surface); padding: var(--spacing-xl) 0;">
+            <div class="container text-center">
+                <h1>About Your CPA Firm</h1>
+                <p class="lead">Dedicated to providing exceptional financial services with integrity and expertise.</p>
+            </div>
+        </section>
+
+        <section class="our-story">
+            <div class="container">
+                <h2>Our Story</h2>
+                <p>Founded in [Year], Your CPA Firm has been serving the [City/Region] community for over [Number] years. We started with a simple mission: to provide clear, reliable, and personalized accounting services that empower our clients.</p>
+                <p>Over the years, we've grown and adapted to the changing financial landscape, but our core values remain the same. We believe in building long-term relationships based on trust and mutual respect.</p>
+
+                <h3>Our Mission</h3>
+                <p>To deliver high-quality financial solutions and strategic advice that enable our clients to achieve their personal and business financial objectives.</p>
+
+                <h3>Our Values</h3>
+                <ul>
+                    <li><strong>Integrity:</strong> Upholding the highest ethical standards in all our dealings.</li>
+                    <li><strong>Excellence:</strong> Striving for continuous improvement and delivering superior service.</li>
+                    <li><strong>Client Focus:</strong> Putting our clients' needs at the forefront of everything we do.</li>
+                    <li><strong>Expertise:</strong> Maintaining a deep understanding of current regulations and best practices.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="team-section" style="background-color: var(--color-surface);">
+            <div class="container">
+                <h2 class="text-center">Meet Our Team</h2>
+                <div class="grid grid-cols-2"> <article class="card text-center">
+                        <img src="images/placeholder-team1.jpg" alt="[Team Member Name]" style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto var(--spacing-md); object-fit: cover; background-color: #444;">
+                        <h3>[Team Member Name]</h3>
+                        <p class="text-secondary"><em>[Title/Role], CPA</em></p>
+                        <p>A brief bio about the team member, their expertise, and experience. Keep it concise and engaging.</p>
+                    </article>
+                    <article class="card text-center">
+                        <img src="images/placeholder-team2.jpg" alt="[Team Member Name]" style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto var(--spacing-md); object-fit: cover; background-color: #444;">
+                        <h3>[Team Member Name]</h3>
+                        <p class="text-secondary"><em>[Title/Role]</em></p>
+                        <p>Another brief bio, highlighting key skills and contributions to the firm.</p>
+                    </article>
+                    </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Your CPA Firm Name. All Rights Reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const mainNavigation = document.querySelector('.main-navigation');
+            if (mobileNavToggle && mainNavigation) {
+                mobileNavToggle.addEventListener('click', function() {
+                    const isExpanded = mainNavigation.classList.toggle('is-open');
+                    this.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Your CPA Firm - Providing expert accounting and tax services.">
+    <link rel="stylesheet" href="custom-dark-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Welcome to Your CPA Firm Name</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Your CPA Firm Name</a>
+            </div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="visually-hidden">Menu</span>
+                &#9776;
+            </button>
+            <nav class="main-navigation" id="primary-navigation">
+                <ul>
+                    <li><a href="index.html" class="current-menu-item">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section text-center">
+            <div class="container">
+                <h1>Expert CPA Services You Can Trust</h1>
+                <p>Helping individuals and businesses achieve financial clarity and success.</p>
+                <p><a href="contact.html" class="button">Schedule a Consultation</a></p>
+            </div>
+        </section>
+
+        <section class="about-snippet">
+            <div class="container">
+                <h2>Welcome to Our Firm</h2>
+                <p>With years of experience, we offer comprehensive accounting, tax, and advisory services tailored to your unique needs. We are committed to professionalism, integrity, and personalized service.</p>
+                <p><a href="about.html" class="button button-secondary">Learn More About Us</a></p>
+            </div>
+        </section>
+
+        <section class="services-overview">
+            <div class="container">
+                <h2 class="text-center">Our Core Services</h2>
+                <div class="grid grid-cols-3"> <article class="card">
+                        <img src="images/placeholder-service1.jpg" alt="Tax Preparation Services" style="aspect-ratio: 16/9; object-fit: cover; background-color: #333;"> <h3>Tax Preparation & Planning</h3>
+                        <p>Navigate complex tax laws with ease. We ensure compliance and maximize your returns.</p>
+                        <a href="services.html#tax" class="link-button">Details &rarr;</a>
+                    </article>
+                    <article class="card">
+                        <img src="images/placeholder-service2.jpg" alt="Bookkeeping Services" style="aspect-ratio: 16/9; object-fit: cover; background-color: #333;"> <h3>Bookkeeping Services</h3>
+                        <p>Accurate and timely bookkeeping to keep your financial records in perfect order.</p>
+                        <a href="services.html#bookkeeping" class="link-button">Details &rarr;</a>
+                    </article>
+                    <article class="card">
+                        <img src="images/placeholder-service3.jpg" alt="Business Advisory Services" style="aspect-ratio: 16/9; object-fit: cover; background-color: #333;"> <h3>Business Advisory</h3>
+                        <p>Strategic advice to help your business grow and thrive in a competitive market.</p>
+                        <a href="services.html#advisory" class="link-button">Details &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section text-center" style="background-color: var(--color-surface);"> <div class="container">
+                <h2>Ready to Take Control of Your Finances?</h2>
+                <p>Let us help you achieve your financial goals. Contact us today for a personalized consultation.</p>
+                <p><a href="contact.html" class="button">Get in Touch</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Your CPA Firm Name. All Rights Reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const mainNavigation = document.querySelector('.main-navigation');
+            if (mobileNavToggle && mainNavigation) {
+                mobileNavToggle.addEventListener('click', function() {
+                    const isExpanded = mainNavigation.classList.toggle('is-open');
+                    this.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
